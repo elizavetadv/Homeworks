@@ -8,11 +8,17 @@ public class Main {
         gameBox.createBox();
         gameBox.printBox();
 
-        System.out.print("\nEnter 2 numbers of cell, separated by a space: ");
+        System.out.print("\nYour turn. Enter 2 numbers of cell, separated by a space: ");
         Scanner sc = new Scanner(System.in);
         String ans =sc.nextLine();
 
-        fillCell.addInCell(ans, "O");
+        fillCell.addInCell(ans);
+
+        gameBox.printBox();
+
+        System.out.println("\nComputer's turn");
+
+        fillCell.addInCellComp();
 
         gameBox.printBox();
     }
