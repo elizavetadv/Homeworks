@@ -35,6 +35,11 @@ public class fullGameCircle {
             gameBox.printBox();
 
             count++;
+
+            if(Win.checkWin()){
+                System.out.println("\n3 matches!");
+                break;
+            }
         }
 
         System.out.println("\nDo you want to play again? (yes/no)");
