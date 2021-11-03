@@ -37,7 +37,6 @@ public class fullGameCircle {
             count++;
 
             if(Win.checkWin()){
-                System.out.println("\n3 matches!");
                 break;
             }
         }
