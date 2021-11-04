@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class fullGameCircle {
 
-    public static void oneGame(){
+    public static void oneGame() {
         System.out.println("Welcome to the Tic-Tac-Toe game!");
 
         gameBox.createBox();
@@ -14,7 +14,7 @@ public class fullGameCircle {
 
         int count = 0;
 
-        while(count <= 5) {
+        while (count <= 5) {
 
             System.out.print("\nYour turn. Enter 2 numbers of cell, separated by a space: ");
 
@@ -24,21 +24,33 @@ public class fullGameCircle {
 
             gameBox.printBox();
 
-            if(count == 4){
+            if (Win.checkWin("X") || Win.checkWin("O")) {
+                break;
+            }
+
+            if (count == 4) {
+                System.out.println("\nNO WINNER!");
                 break;
             }
 
             System.out.println("\nComputer's turn");
 
-            fillCell.addInCellComp();
+            if (fillCell.stopOrMakeWin("O")) {
+
+                if (fillCell.stopOrMakeWin("X")) {
+
+                    fillCell.addInCellComp();
+                }
+
+            }
 
             gameBox.printBox();
 
-            count++;
-
-            if(Win.checkWin()){
+            if (Win.checkWin("X") || Win.checkWin("O")) {
                 break;
             }
+
+            count++;
         }
 
         System.out.println("\nDo you want to play again? (yes/no)");
@@ -46,12 +58,12 @@ public class fullGameCircle {
 
         String answer = sc.nextLine();
 
-        if(answer.equals("yes")){
+        if (answer.equals("yes")) {
 
             fullGameCircle.oneGame();
             System.out.println("\n");
 
-        } else{
+        } else {
             System.out.println("\nBye!");
         }
 
