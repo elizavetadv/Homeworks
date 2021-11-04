@@ -2,13 +2,13 @@ package by.overone.game;
 
 import java.util.Scanner;
 
-public class fullGameCircle {
+public class Game {
 
     public static void oneGame() {
         System.out.println("Welcome to the Tic-Tac-Toe game!");
 
-        gameBox.createBox();
-        gameBox.printBox();
+        Box.createBox();
+        Box.printBox();
 
         Scanner sc = new Scanner(System.in);
 
@@ -20,9 +20,9 @@ public class fullGameCircle {
 
             String ans = sc.nextLine();
 
-            fillCell.addInCell(ans);
+            Cell.addInCell(ans);
 
-            gameBox.printBox();
+            Box.printBox();
 
             if (Win.checkWin("X") || Win.checkWin("O")) {
                 break;
@@ -35,16 +35,16 @@ public class fullGameCircle {
 
             System.out.println("\nComputer's turn");
 
-            if (fillCell.stopOrMakeWin("O")) {
+            if (Cell.stopOrMakeWin("O")) {
 
-                if (fillCell.stopOrMakeWin("X")) {
+                if (Cell.stopOrMakeWin("X")) {
 
-                    fillCell.addInCellComp();
+                    Cell.addInCellComp();
                 }
 
             }
 
-            gameBox.printBox();
+            Box.printBox();
 
             if (Win.checkWin("X") || Win.checkWin("O")) {
                 break;
@@ -60,7 +60,7 @@ public class fullGameCircle {
 
         if (answer.equals("yes")) {
 
-            fullGameCircle.oneGame();
+            Game.oneGame();
             System.out.println("\n");
 
         } else {

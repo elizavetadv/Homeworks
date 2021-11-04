@@ -3,7 +3,7 @@ package by.overone.game;
 import java.util.HashMap;
 import java.util.Map;
 
-public class gameBox {
+public class Box {
     static Map<String, String> box = new HashMap<>();
 
     public static void createBox(){
