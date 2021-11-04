@@ -61,18 +61,28 @@ public class Game {
             count++;
         }
 
-        System.out.println("\nDo you want to play again? (yes/no)");
-        System.out.print("Your answer: ");
+        while(true) {
 
-        String answer = sc.nextLine();
+            System.out.println("\nDo you want to play again? (yes/no)");
+            System.out.print("Your answer: ");
 
-        if (answer.equals("yes")) {
+            String answer = sc.nextLine();
 
-            Game.oneGame();
-            System.out.println("\n");
+            if (answer.equals("yes")) {
 
-        } else {
-            System.out.println("\nBye!");
+                Game.oneGame();
+                System.out.println("\n");
+                break;
+
+            } else if (answer.equals("no")) {
+
+                System.out.println("\nBye!");
+                break;
+
+            } else {
+                System.out.println("\nI don't understand you... Let's try again!");
+            }
+
         }
 
     }
