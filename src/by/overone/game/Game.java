@@ -13,7 +13,7 @@ public class Game {
         Scanner sc = new Scanner(System.in);
 
         int count = 0;
-        String ans = " ";
+        String ans;
 
         while (count <= 5) {
 

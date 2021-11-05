@@ -6,8 +6,6 @@ import java.util.Random;
 
 public class Cell {
 
-    public static int valueStopUserWin;
-
     public static boolean checkCell(String key) {
         return Box.box.get(key).equals(" ");
     }
@@ -70,7 +68,7 @@ public class Cell {
 
         if (Box.box.get("3 1").equals(player) && Box.box.get("3 2").equals(player) && Box.box.get("3 3").equals(" ")) {
             Box.box.replace("3 3", "O");
-            valueStopUserWin = 1;
+            return false;
         }
 
         if (Box.box.get("3 1").equals(player) && Box.box.get("3 3").equals(player) && Box.box.get("3 2").equals(" ")) {
