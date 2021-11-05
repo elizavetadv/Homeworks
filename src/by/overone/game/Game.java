@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Game {
 
     public static void oneGame() {
-        System.out.println("Welcome to the Tic-Tac-Toe game!");
+        System.out.println("\nWelcome to the Tic-Tac-Toe game!");
 
         Box.createBox();
         Box.printBox();
@@ -61,7 +61,6 @@ public class Game {
             if (answer.equals("yes")) {
 
                 Game.oneGame();
-                System.out.println("\n");
                 break;
 
             } else if (answer.equals("no")) {
