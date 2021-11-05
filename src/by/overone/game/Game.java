@@ -13,20 +13,10 @@ public class Game {
         Scanner sc = new Scanner(System.in);
 
         int count = 0;
-        String ans;
 
         while (count <= 5) {
 
-            System.out.print("\nYour turn. Enter 2 numbers of cell, separated by a space: ");
-            ans = sc.nextLine();
-
-            while(!Utils.checkEnteredData(ans)){
-
-                System.out.println("\nInvalid data...");
-                System.out.print("Your turn. Enter 2 numbers of cell, separated by a space: ");
-                ans = sc.nextLine();
-
-            }
+            String ans = Utils.enterCorrectValue();
 
             Cell.addInCell(ans);
 
