@@ -15,7 +15,8 @@ public class Cell {
         if (checkCell(key)) {
             Box.box.replace(key, ans);
         } else {
-            System.out.println("Cell isn't empty");
+            System.out.println("\nCell isn't empty. Try again!");
+            addInCell(Utils.enterCorrectValue());
         }
     }
 
