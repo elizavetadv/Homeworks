@@ -1,7 +1,5 @@
 package by.overone.hw24;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("What is your zodiac by date of birth?");
@@ -10,6 +8,16 @@ public class Main {
 
         Utils.enterData(birthday);
 
-        System.out.println(Zodiac.getUserZodiac(birthday.monthBh.getUserMonth()));
+        System.out.print("____________________");
+
+        Result result = new Result() {
+            @Override
+            public void showResult() {
+                System.out.println("\nYour zodiac is " + Zodiac.getUserZodiac(birthday.monthBh.getUserMonth()).toLowerCase() + "!");
+            }
+        };
+
+        result.showResult();
+
     }
 }
