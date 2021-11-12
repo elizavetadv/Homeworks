@@ -23,5 +23,6 @@ public class Main {
 
         System.out.println(birthday.monthBh.getUserMonth());
 
+        System.out.println(Zodiac.getUserZodiac(ans));
     }
 }
