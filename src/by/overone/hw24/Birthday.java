@@ -1,6 +1,17 @@
 package by.overone.hw24;
 
 public class Birthday {
+    private int userDay;
+
+    MonthBh monthBh = new MonthBh();
+
+    public int getUserDay() {
+        return userDay;
+    }
+
+    public void setUserDay(int userDay) {
+        this.userDay = userDay;
+    }
 
     class MonthBh {
         private String userMonth;
@@ -10,7 +21,7 @@ public class Birthday {
         }
 
         public void setUserMonth(String str) {
-            this.userMonth = Month.getMonth(str).toLowerCase();
+            this.userMonth = Month.getMonth(str);
         }
 
     }
