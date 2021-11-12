@@ -16,7 +16,7 @@ public class Utils {
 
     }
 
-    public static void enterData() {
+    public static void enterData(Birthday birthday) {
         boolean flag1 = true, flag2 = true;
         int day = 0;
         String month = "";
@@ -70,8 +70,6 @@ public class Utils {
             }
 
         }
-
-        Birthday birthday = new Birthday();
 
         birthday.setUserDay(day);
         birthday.monthBh.setUserMonth(month);
