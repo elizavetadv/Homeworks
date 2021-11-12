@@ -4,25 +4,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-//        System.out.print("Enter day and month of your birth (ex: 20 august): ");
-        System.out.print("Enter day of your birth: ");
-
-        Scanner sc = new Scanner(System.in);
-
-        int day = sc.nextInt();
-
-        System.out.print("Enter month of your birth: ");
-
-        String ans = sc.next();
+        System.out.println("What is your zodiac by date of birth?");
 
         Birthday birthday = new Birthday();
-        birthday.setUserDay(day);
 
-        birthday.monthBh.setUserMonth(ans);
+        Utils.enterData(birthday);
 
-        System.out.println(birthday.monthBh.getUserMonth());
-
-        System.out.println(Zodiac.getUserZodiac(ans));
+        System.out.println(Zodiac.getUserZodiac(birthday.monthBh.getUserMonth()));
     }
 }
