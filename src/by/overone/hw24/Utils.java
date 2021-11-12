@@ -63,7 +63,7 @@ public class Utils {
 
             String month1 = month.toUpperCase();
             if (month1.equals("FEBRUARY")) {
-                if (day > 28) {
+                if (day > 29) {
                     System.out.println("\nFebruary contains 28 days. Please, try again...");
                     flag1 = true;
                 }

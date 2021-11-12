@@ -3,7 +3,11 @@ package by.overone.hw24;
 public class Birthday {
     private int userDay;
 
-    MonthBh monthBh = new MonthBh();
+    MonthBh monthBh;
+
+    {
+        monthBh = new MonthBh();
+    }
 
     public int getUserDay() {
         return userDay;
@@ -21,7 +25,7 @@ public class Birthday {
         }
 
         public void setUserMonth(String str) {
-            this.userMonth = Month.getMonth(str);
+            this.userMonth = Month.getMonth(str).toString();
         }
 
     }
