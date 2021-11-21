@@ -5,7 +5,7 @@ import java.net.URL;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        downloadFromInternet("https://shakespeare.folger.edu/downloads/txt/romeo-and-juliet_TXT_FolgerShakespeare.txt", "roman.txt");
+        downloadFromInternet();
 
         FileReader in = new FileReader("roman.txt");
         //or
@@ -23,11 +23,11 @@ public class Main {
         System.out.println(result);
     }
 
-    private static void downloadFromInternet(String urlStr, String file) throws IOException, IOException {
-        URL url = new URL(urlStr);
+    private static void downloadFromInternet() throws IOException {
+        URL url = new URL("https://shakespeare.folger.edu/downloads/txt/romeo-and-juliet_TXT_FolgerShakespeare.txt");
 
         BufferedInputStream bufferedInputStream= new BufferedInputStream(url.openStream());
-        FileOutputStream fileOutputStream = new FileOutputStream(file);
+        FileOutputStream fileOutputStream = new FileOutputStream("roman.txt");
 
         byte[] buffer = new byte[1024];
 
