@@ -4,7 +4,7 @@ public class Store {
     private  int product;
 
     public synchronized void get() throws InterruptedException {
-        while (product < 1){
+        while (product == 0){
             wait();
         }
 
@@ -14,10 +14,12 @@ public class Store {
         System.out.println("Товаров на складе: " + product);
 
         notify();
+
+        Thread.sleep(1000);
     }
 
     public synchronized void put() throws InterruptedException {
-        while(product >= 3){
+        while(product == 4){
             wait();
         }
 
@@ -27,5 +29,7 @@ public class Store {
         System.out.println("Товаров на складе: " + product);
 
         notify();
+
+        Thread.sleep(1000);
     }
 }
